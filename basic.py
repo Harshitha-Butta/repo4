@@ -18,7 +18,7 @@ g.pull()
 
 version = '21.9.0.42'
 
-#version=os.environ['version']
+version=os.environ['version']
 
 with open('versions_hyd_host2.json') as f:
     data=json.load(f)
