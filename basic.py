@@ -32,7 +32,7 @@ with open('versions_hyd_host2.json') as f:
 add_version(data)
 
 #g.add('--all')
-repo.remote().add('.')
+repo.remote().add(name='repo4',url='https://github.com//Harshitha-Butta//repo4')
 repo.remote().commit()
 #g.commit('-m', 'commit message from python script', author='harshitha.butta@gmail.com')
 origin = repo.remote(name='origin')
