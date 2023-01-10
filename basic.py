@@ -16,7 +16,7 @@ repo = Repo('C:\\git practice\\repo4')
 g.pull()
 #version=input()
 
-version = '21.9.0.41'
+version = '21.9.0.42'
 
 #version=os.environ['version']
 
