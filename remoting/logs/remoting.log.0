@@ -21,3 +21,7 @@ Jan 10, 2023 10:16:51 PM hudson.remoting.jnlp.Main$CuiListener status
 INFO: Trying protocol: JNLP4-connect
 Jan 10, 2023 10:16:51 PM org.jenkinsci.remoting.protocol.impl.BIONetworkLayer$Reader run
 INFO: Waiting for ProtocolStack to start.
+Jan 10, 2023 10:16:51 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Remote identity confirmed: b6:63:d6:a8:11:92:aa:b9:55:fd:c3:9b:2a:0d:f5:2b
+Jan 10, 2023 10:16:51 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Connected

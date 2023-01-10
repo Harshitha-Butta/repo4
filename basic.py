@@ -19,7 +19,7 @@ g.pull()
 version = '21.9.0.42'
 
 version=os.environ['version']
-
+print("New version is : ",version)
 with open('versions_hyd_host2.json') as f:
     data=json.load(f)
     data['configuration']['cfc_versions'][version]=True
