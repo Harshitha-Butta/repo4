@@ -25,3 +25,5 @@ Jan 10, 2023 5:39:06 PM hudson.remoting.jnlp.Main$CuiListener status
 INFO: Remote identity confirmed: b6:63:d6:a8:11:92:aa:b9:55:fd:c3:9b:2a:0d:f5:2b
 Jan 10, 2023 5:39:06 PM hudson.remoting.jnlp.Main$CuiListener status
 INFO: Connected
+Jan 10, 2023 5:39:31 PM org.jvnet.winp.Native loadByUrl
+WARNING: DLL and EXE are inconsistenly present on disk
