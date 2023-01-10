@@ -9,9 +9,6 @@ import os
 import re
 import shlex
 import warnings
-
-from pathlib import Path
-
 from gitdb.db.loose import LooseObjectDB
 
 from gitdb.exc import BadObject
@@ -271,7 +268,7 @@ class Repo(object):
             pass
 
         try:
-            common_dir = (Path(self.git_dir) / "commondir").read_text().splitlines()[0].strip()
+            common_dir = open(osp.join(self.git_dir, "commondir"), "rt").readlines()[0].strip()
             self._common_dir = osp.join(self.git_dir, common_dir)
         except OSError:
             self._common_dir = ""
@@ -1262,8 +1259,7 @@ class Repo(object):
             option per list item which is passed exactly as specified to clone.
             For example ['--config core.filemode=false', '--config core.ignorecase',
             '--recurse-submodule=repo1_path', '--recurse-submodule=repo2_path']
-        :param allow_unsafe_protocols: Allow unsafe protocols to be used, like ext
-        :param allow_unsafe_options: Allow unsafe options to be used, like --upload-pack
+        :param unsafe_protocols: Allow unsafe protocols to be used, like ext
         :param kwargs:
             * odbt = ObjectDatabase Type, allowing to determine the object database
               implementation used by the returned Repo instance
@@ -1306,8 +1302,7 @@ class Repo(object):
             If you want to unset some variable, consider providing empty string
             as its value.
         :param multi_options: See ``clone`` method
-        :param allow_unsafe_protocols: Allow unsafe protocols to be used, like ext
-        :param allow_unsafe_options: Allow unsafe options to be used, like --upload-pack
+        :param unsafe_protocols: Allow unsafe protocols to be used, like ext
         :param kwargs: see the ``clone`` method
         :return: Repo instance pointing to the cloned directory"""
         git = cls.GitCommandWrapperType(os.getcwd())
@@ -1388,6 +1383,4 @@ class Repo(object):
             rebase_head_file = osp.join(self.git_dir, "REBASE_HEAD")
         if not osp.isfile(rebase_head_file):
             return None
-        with open(rebase_head_file, "rt") as f:
-            content = f.readline().strip()
-        return self.commit(content)
+        return self.commit(open(rebase_head_file, "rt").readline().strip())

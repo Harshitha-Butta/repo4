@@ -2,7 +2,6 @@
 from __future__ import annotations
 import os
 import stat
-from pathlib import Path
 from string import digits
 
 from git.exc import WorkTreeRepositoryUnsupported
@@ -84,7 +83,7 @@ def find_worktree_git_dir(dotgit: "PathLike") -> Optional[str]:
         return None
 
     try:
-        lines = Path(dotgit).read_text().splitlines()
+        lines = open(dotgit, "r").readlines()
         for key, value in [line.strip().split(": ") for line in lines]:
             if key == "gitdir":
                 return value
