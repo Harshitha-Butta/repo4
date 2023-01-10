@@ -32,7 +32,9 @@ with open('versions_hyd_host2.json') as f:
 add_version(data)
 
 g.add('--all')
-git.commit()
+repo.index.add('versions_hyd_host2.json')
+repo.index.commit("yes commit")
+repo.git.push("--set-upstream","origin","main")
 #g.commit('-m', 'commit message from python script', author='harshitha.butta@gmail.com')
-origin = repo.remote(name='origin')
-origin.push()
+#origin = repo.remote(name='origin')
+#origin.push()
