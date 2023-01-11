@@ -36,13 +36,14 @@
             "21.9.0.41": true,
             "21.9.0.42": true,
             "21.9.0.43": true,
-            "21.9.0.44": true
+            "21.9.0.44": true,
+            "21.9.0.45": true
         },
         "standalone_update_use_latest_local_version": true,
-        "standalone_latest_general_release": "21.9.0.44",
-        "standalone_latest_controlled_release": "21.9.0.44",
-        "hosted_installers_latest": "21.9.0.44",
-        "aem_host_last_version": "21.9.0.44"
+        "standalone_latest_general_release": "21.9.0.45",
+        "standalone_latest_controlled_release": "21.9.0.45",
+        "hosted_installers_latest": "21.9.0.45",
+        "aem_host_last_version": "21.9.0.45"
     },
     "service_overrides": {}
 }
