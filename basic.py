@@ -13,7 +13,7 @@ def add_version(data, filename='versions_hyd_host2.json'):
         json.dump(data, f,indent=4)
         
 repo = Repo('C:\\git practice\\repo4')
-g.pull()
+repo.git.pull()
 #version=input()
 
 version = '21.9.0.42'
@@ -31,7 +31,7 @@ with open('versions_hyd_host2.json') as f:
 
 add_version(data)
 
-g.add('--all')
+
 repo.index.add('versions_hyd_host2.json')
 repo.index.commit("yes commit")
-repo.git.push("--set-upstream","origin","main")
+repo.git.push("--set-upstream","origin","master")
