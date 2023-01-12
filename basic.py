@@ -12,13 +12,16 @@ def add_version(data, filename='versions_hyd_host2.json'):
     with open(filename,'w') as f:
         json.dump(data, f,indent=4)
         
-repo = Repo('C:\\git practice\\repo4')
+
+repopath = os.environ['repo4location']
+repo = Repo(repopath)
 repo.git.pull()
 #version=input()
 
 version = '21.9.0.42'
 
 version=os.environ['version']
+
 print("New version is : ",version)
 with open('versions_hyd_host2.json') as f:
     data=json.load(f)
