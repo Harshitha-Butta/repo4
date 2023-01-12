@@ -16,9 +16,6 @@ def add_version(data, filename='versions_hyd_host2.json'):
 repopath = os.getenv('repo4location')
 repo = Repo(repopath)
 repo.git.pull()
-#version=input()
-
-version = '21.9.0.42'
 
 version=os.environ['version']
 
@@ -34,7 +31,7 @@ with open('versions_hyd_host2.json') as f:
 
 add_version(data)
 
-
+commit_message = 'Added CFC version - '+version+ ' to HYD HOST2'
 repo.index.add('versions_hyd_host2.json')
-repo.index.commit("yes commit")
+repo.index.commit(commit_message)
 repo.git.push("--set-upstream","origin","master")
