@@ -34,4 +34,4 @@ add_version(data)
 
 repo.index.add('versions_hyd_host2.json')
 repo.index.commit("yes commit")
-repo.git.push("--set-upstream","origin","main")
+repo.git.push("--set-upstream","origin","master")
