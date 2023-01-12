@@ -13,7 +13,7 @@ def add_version(data, filename='versions_hyd_host2.json'):
         json.dump(data, f,indent=4)
         
 
-repopath = os.environ['repo4location']
+repopath = os.getenv('repo4location')
 repo = Repo(repopath)
 repo.git.pull()
 #version=input()
