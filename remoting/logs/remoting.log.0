@@ -25,3 +25,5 @@ Jan 11, 2023 10:31:36 AM hudson.remoting.jnlp.Main$CuiListener status
 INFO: Remote identity confirmed: b6:63:d6:a8:11:92:aa:b9:55:fd:c3:9b:2a:0d:f5:2b
 Jan 11, 2023 10:31:36 AM hudson.remoting.jnlp.Main$CuiListener status
 INFO: Connected
+Jan 12, 2023 3:54:48 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Terminated
