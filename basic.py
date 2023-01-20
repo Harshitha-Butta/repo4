@@ -1,11 +1,7 @@
-import git
+
 import json
 from git import Repo
 import os
-
-#g = git.cmd.Git('https://github.com//Harshitha-Butta//repo4')
-
-
 
 
 def add_version(data, filename='versions_hyd_host2.json'):
